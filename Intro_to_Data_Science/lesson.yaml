@@ -49,9 +49,9 @@
     18-25, which sample would be more representative of the target population: a sample
     of 25 men who live in a nearby retirement home, or a sample of 25 men who are
     students at a local university?'
-  AnswerChoices: Men living at the retirement home; College students
-  CorrectAnswer: College students
-  AnswerTests: omnitest(correctVal='College students')
+  AnswerChoices: Retirement home; College
+  CorrectAnswer: College
+  AnswerTests: omnitest(correctVal='College')
   Hint: Since your target population is technically all men ages 18-25 living in the
     U.S., which of these 2 sample populations more closely matches the population
     of interest?
@@ -882,3 +882,17 @@
     you back for many more in the future.
 
 
+
+- Class: mult_question
+  Output: Which of the following is not a planet in our solar system?
+  AnswerChoices: Venus;Saturn;Pluto
+  CorrectAnswer: Pluto
+  AnswerTests: omnitest(correctVal= 'Pluto')
+  Hint: It's the smallest celestial body you can choose.
+
+- Class: mult_question
+  Output: Which of the following is not a planet in our solar system?
+  AnswerChoices: Venus;Saturn;Pluto
+  CorrectAnswer: Pluto
+  AnswerTests: omnitest(correctVal= 'Pluto')
+  Hint: It's the smallest celestial body you can choose.
