@@ -67,11 +67,12 @@
   Output: To check your understanding of some of the concepts of data collection that
     we have covered thus far, see if you can complete the following sentence.
 
-- Class: text_order_question
+- Class: mult_question
   Output: A statistician collects data from a __________ in order to generalize results
-    to an entire __________. (Separate the two words in your response with a comma.)
+    to an entire __________. 
+  AnswerChoices: sample, population; population, sample
   CorrectAnswer: sample, population
-  AnswerTests: word_order=sample, population
+  AnswerTests: omnitest(correctVal='sample, population')
   Hint: The first term is a subset of the second. Make sure you type two words separated
     by a comma.
 
@@ -224,7 +225,7 @@
   Output: The distance you walk would be an example of what type of variable?
   AnswerChoices: Continuous; Discrete; Categorical
   CorrectAnswer: Continuous
-  AnswerTests: word= Continuous
+  AnswerTests: omnitest(correctVal='Continuous')
   Hint: This variable is one that can assume any value within the scope of the problem.
 
 - Class: mult_question
@@ -232,7 +233,7 @@
     type of variable?
   AnswerChoices: Continuous; Discrete; Categorical
   CorrectAnswer: Categorical
-  AnswerTests: word= Categorical
+  AnswerTests: omnitest(correctVal='Categorical'
   Hint: This variable is one that is ascribed a fixed categorical description.
 
 - Class: mult_question
@@ -325,11 +326,11 @@
   AnswerTests: swirl1cmd=sum(cars$price)
   Hint: Type in 'sum(cars$price)'.
 
-- Class: exact_question
+- Class: cmd_question
   Output: Now divide this number, using the '/' symbol as the division operator, by
-    the total number of values in the data subset. What is this value?
-  CorrectAnswer: '19.99259'
-  AnswerTests: exact=19.99259
+    the total number of values in the data subset. What is this value? 
+  CorrectAnswer: 1079.6/54
+  AnswerTests: omnitest(correctExpr='1079.6/54')
   Hint: Divide 1,079.6 by 54.
 
 - Class: cmd_question
@@ -549,11 +550,11 @@
     the upper 25% and lower 25% of data points, respectively. The only exception is
     when there are outliers, which I'll explain shortly.
 
-- Class: range_question
+- Class: cmd_question
   Output: Looking at the box plot, what is the approximate interquartile range for
     the midsize vehicles?
   CorrectAnswer: 16- 20
-  AnswerTests: range=16- 20
+  AnswerTests: omnitest(correctExpr='16- 20')
   Hint: Subtract the Q1 value from the Q3 value. The Q1 value is the minimum value
     contained in the box and the Q3 value is the maximum value contained in the box.
 
@@ -584,14 +585,6 @@
     within a data set.
   Figure: mod1_boxplot.R
   FigureType: new
-
-- Class: text_many_question
-  Output: When looking at the box plot, which car types appear to have outliers? Separate
-    your answers with a comma.
-  CorrectAnswer: small, midsize
-  AnswerTests: word_many=small, midsize
-  Hint: Look for the types of cars that correspond to the box plots with circles above
-    or below them.
 
 - Class: text
   Output: 'Since we have finished our introduction to the interquartile range, we
@@ -709,7 +702,7 @@
     histogram?
   AnswerChoices: Symmetric; Right-skewed; Left-skewed
   CorrectAnswer: Right-skewed
-  AnswerTests: word= Right-skewed
+  AnswerTests: omnitest(correctVal='Right-skewed')
   Hint: Look to see which tail extends further. The plot is said to be skewed in that
     direction.
 
@@ -719,7 +712,7 @@
     or equal to the MEAN?
   AnswerChoices: Greater than; Less than; Equal to
   CorrectAnswer: Less than
-  AnswerTests: word= Less than
+  AnswerTests: omnitest(correctVal='Less than')
   Hint: Keep in mind that data points that create a plot's long tail will tend to
     'pull' the mean in that direction. The median is not affected by how far away
     the data points are.
@@ -739,12 +732,20 @@
   Figure: mod1_bargraph.R
   FigureType: new
 
-- Class: text_order_question
+- Class: mult_question
   Output: According to the bar graph, which car type is the most expensive, on average?
-    Which is the least expensive, on average? Answer the two questions in the same
-    order with a comma separating the two answers.
-  CorrectAnswer: midsize, small
-  AnswerTests: word_order=midsize, small
+  AnswerChoices: midsize; small
+  CorrectAnswer: midsize
+  AnswerTests: omnitest(correctVal='midsize')
+  Hint: Look at the corresponding car type for the tallest bar to determine which
+    car is the most expensive. Look at the corresponding car type for the shortest
+    bar to determine which car is the least expensive.
+
+- Class: mult_question
+  Output: Which is the least expensive, on average? 
+  AnswerChoices: midsize; small
+  CorrectAnswer: small
+  AnswerTests: omnitest(correctVal='small')
   Hint: Look at the corresponding car type for the tallest bar to determine which
     car is the most expensive. Look at the corresponding car type for the shortest
     bar to determine which car is the least expensive.
@@ -756,11 +757,11 @@
   Figure: mod1_bargraph_add.R
   FigureType: addition
 
-- Class: range_question
+- Class: cmd_question
   Output: According to the bar graph, what is the average price for a 'large' car
     (in $1000s)?
   CorrectAnswer: 22- 26
-  AnswerTests: range=22- 26
+  AnswerTests: omnitest(correctExpr='22- 26')
   Hint: Look at the highest value on the y-axis that the \large\" bar reaches."
 
 - Class: figure
@@ -787,7 +788,7 @@
     plot?'
   AnswerChoices: Continuous; Discrete; Categorical
   CorrectAnswer: Continuous
-  AnswerTests: word= Continuous
+  AnswerTests: omnitest(correctVal='Continuous')
   Hint: Think about which of the three variable types has an indefinite number of
     possible values.
 
@@ -806,7 +807,7 @@
   AnswerChoices: Dot plot; Histogram; Stem-and-leaf plot; Bar graph; Box plot; Scatter
     plot
   CorrectAnswer: Bar graph
-  AnswerTests: word= Bar graph
+  AnswerTests: omnitest(correctVal='Bar graph')
   Hint: This type of graph is used to display a single categorical variable.
 
 - Class: figure
@@ -819,7 +820,7 @@
   AnswerChoices: Dot plot; Histogram; Stem-and-leaf plot; Bar graph; Box plot; Scatter
     plot
   CorrectAnswer: Scatter plot
-  AnswerTests: word= Scatter plot
+  AnswerTests: omnitest(correctVal='Scatter plot')
   Hint: This type of plot is used to show the relationship between two continuous
     variables.
 
@@ -833,7 +834,7 @@
   AnswerChoices: Dot plot; Histogram; Stem-and-leaf plot; Bar graph; Box plot; Scatter
     plot
   CorrectAnswer: Dot plot
-  AnswerTests: word= Dot plot
+  AnswerTests: omnitest(correctVal='Dot plot')
   Hint: This type of plot is used to visually convey the values of one variable using
     only one axis.
 
@@ -874,25 +875,9 @@
   AnswerChoices: Dot plot; Histogram; Stem-and-leaf plot; Bar graph; Box plot; Scatter
     plot
   CorrectAnswer: Stem-and-leaf plot
-  AnswerTests: word= Stem-and-leaf plot
+  AnswerTests: omnitest(correctVal='Stem-and-leaf plot')
   Hint: This type of plot organizes numerical data in order of decimal place value.
 
 - Class: text
   Output: CONGRATULATIONS! You've completed your first lesson! I look forward to having
     you back for many more in the future.
-
-
-
-- Class: mult_question
-  Output: Which of the following is not a planet in our solar system?
-  AnswerChoices: Venus;Saturn;Pluto
-  CorrectAnswer: Pluto
-  AnswerTests: omnitest(correctVal= 'Pluto')
-  Hint: It's the smallest celestial body you can choose.
-
-- Class: mult_question
-  Output: Which of the following is not a planet in our solar system?
-  AnswerChoices: Venus;Saturn;Pluto
-  CorrectAnswer: Pluto
-  AnswerTests: omnitest(correctVal= 'Pluto')
-  Hint: It's the smallest celestial body you can choose.
