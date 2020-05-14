@@ -270,11 +270,11 @@
   Figure: mod1_dotplot.R
   FigureType: new
 
-- Class: cmd_question
+- Class: exact_question
   Output: When looking at this dot plot, around what price (in $1000s) does there
     appear to be the highest density of data points?
-  CorrectAnswer: 7-13
-  AnswerTests: omnitest(correctExpr='7-13')
+  CorrectAnswer: 10
+  AnswerTests: omnitest(correctVal=10)
   Hint: Look at the part of the graph where the dots are the darkest and closest together.
 
 - Class: text
@@ -639,11 +639,12 @@
   Figure: mod1_boxplot.R
   FigureType: new
 
-- Class: text_question
+- Class: mult_question
   Output: Now it is your turn! Is the variability of prices of cars of type 'large'
     higher or lower than that of cars of type 'small'?
+  AnswerChoices: higher; lower
   CorrectAnswer: higher
-  AnswerTests: word=higher
+  AnswerTests: omnitest(correctVal='higher')
   Hint: Look to see if the range of cars of type 'large' is greater or less than that
     of cars of type 'small'.
 
