@@ -233,14 +233,14 @@
     type of variable?
   AnswerChoices: Continuous; Discrete; Categorical
   CorrectAnswer: Categorical
-  AnswerTests: omnitest(correctVal='Categorical'
+  AnswerTests: omnitest(correctVal='Categorical')
   Hint: This variable is one that is ascribed a fixed categorical description.
 
 - Class: mult_question
   Output: The number of people you pass would be an example of what type of variable?
   AnswerChoices: Continuous; Discrete; Categorical
   CorrectAnswer: Discrete
-  AnswerTests: word= Discrete
+  AnswerTests: omnitest(correctVal='Discrete')
   Hint: This variable is one that may take on one of a limited, and usually fixed,
     number of possible values.
 
@@ -270,11 +270,11 @@
   Figure: mod1_dotplot.R
   FigureType: new
 
-- Class: range_question
+- Class: cmd_question
   Output: When looking at this dot plot, around what price (in $1000s) does there
     appear to be the highest density of data points?
-  CorrectAnswer: 13-Jul
-  AnswerTests: range=7-13
+  CorrectAnswer: 7-13
+  AnswerTests: omnitest(correctExpr='7-13')
   Hint: Look at the part of the graph where the dots are the darkest and closest together.
 
 - Class: text
@@ -287,7 +287,7 @@
     Using the R-command 'range(cars$price)', determine the exact values for the minimum
     and maximum of the data set, respectively.
   CorrectAnswer: range(cars$price)
-  AnswerTests: swirl1cmd=range(cars$price)
+  AnswerTests: omnitest(correctExpr='range(cars$price)')
   Hint: Type in 'range(cars$price)' and hit enter to see the minimum and maximum prices.
 
 - Class: figure
@@ -323,7 +323,7 @@
   Output: Using the R-command 'sum(cars$price)', can you tell me the sum of the prices
     of the 54 cars in the data set?
   CorrectAnswer: sum(cars$price)
-  AnswerTests: swirl1cmd=sum(cars$price)
+  AnswerTests: omnitest(correctExpr='sum(cars$price)')
   Hint: Type in 'sum(cars$price)'.
 
 - Class: cmd_question
@@ -338,7 +338,7 @@
     you, R contains a built-in function to automatically complete this process for
     you. Try typing the R-command 'mean(cars$price)'.
   CorrectAnswer: mean(cars$price)
-  AnswerTests: swirl1cmd=mean(cars$price)
+  AnswerTests: omnitest(correctExpr='mean(cars$price)')
   Hint: Just type mean(cars$price) and hit enter.
 
 - Class: text
