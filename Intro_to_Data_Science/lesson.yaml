@@ -51,7 +51,7 @@
     students at a local university?'
   AnswerChoices: Men living at the retirement home; College students
   CorrectAnswer: College students
-  AnswerTests: word= College students
+  AnswerTests: omnitest(correctVal='College students')
   Hint: Since your target population is technically all men ages 18-25 living in the
     U.S., which of these 2 sample populations more closely matches the population
     of interest?
