@@ -805,8 +805,7 @@
 
 - Class: mult_question
   Output: Which type of plot is shown here?
-  AnswerChoices: Dot plot; Histogram; Stem-and-leaf plot; Bar graph; Box plot; Scatter
-    plot
+  AnswerChoices: Dot plot; Histogram; Stem-and-leaf plot; Bar graph; Box plot; Scatter plot
   CorrectAnswer: Bar graph
   AnswerTests: omnitest(correctVal='Bar graph')
   Hint: This type of graph is used to display a single categorical variable.
@@ -818,8 +817,7 @@
 
 - Class: mult_question
   Output: Which type of plot is shown here?
-  AnswerChoices: Dot plot; Histogram; Stem-and-leaf plot; Bar graph; Box plot; Scatter
-    plot
+  AnswerChoices: Dot plot; Histogram; Stem-and-leaf plot; Bar graph; Box plot; Scatter plot
   CorrectAnswer: Scatter plot
   AnswerTests: omnitest(correctVal='Scatter plot')
   Hint: This type of plot is used to show the relationship between two continuous
@@ -832,8 +830,7 @@
 
 - Class: mult_question
   Output: Which type of plot is shown here?
-  AnswerChoices: Dot plot; Histogram; Stem-and-leaf plot; Bar graph; Box plot; Scatter
-    plot
+  AnswerChoices: Dot plot; Histogram; Stem-and-leaf plot; Bar graph; Box plot; Scatter plot
   CorrectAnswer: Dot plot
   AnswerTests: omnitest(correctVal='Dot plot')
   Hint: This type of plot is used to visually convey the values of one variable using
@@ -849,7 +846,7 @@
   AnswerChoices: Dot plot; Histogram; Stem-and-leaf plot; Bar graph; Box plot; Scatter
     plot
   CorrectAnswer: Histogram
-  AnswerTests: word= Histogram
+  AnswerTests: omnitest(correctVal='Histogram')
   Hint: This type of plot partitions the values of your data into several bins.
 
 - Class: figure
