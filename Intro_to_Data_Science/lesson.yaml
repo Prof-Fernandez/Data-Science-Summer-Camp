@@ -859,7 +859,7 @@
   AnswerChoices: Dot plot; Histogram; Stem-and-leaf plot; Bar graph; Box plot; Scatter
     plot
   CorrectAnswer: Box plot
-  AnswerTests: word= Box plot
+  AnswerTests: omnitest(correctVal='Box plot')
   Hint: This type of plot is used to summarize the main descriptive statistics of
     a particular data set.
 
