@@ -18,7 +18,7 @@
 - Class: cmd_question
   Output: Let's create a vector containing the numbers 1 through 20 using the `:` operator. Store the result in a variable called my_vector.
   CorrectAnswer: my_vector <- 1:20
-  AnswerTests: omnitest(correctExpr='my_vector <- 1:20')
+  AnswerTests: any_of_exprs('my_vector <- 1:20', 'my_vector <- c(1:20)')
   Hint: You learned about the `:` operator in the lesson on sequences. If you wanted to create a vector containing the numbers 1, 2, and 3 (in that order), you could use either c(1, 2, 3) or 1:3. In this case, we want the numbers 1 through 20 stored in a variable called my_vector. Also, remember that you don't need the c() function when using `:`.
 
 - Class: cmd_question
@@ -93,7 +93,7 @@
 - Class: cmd_question
   Output: Now, look at the documentation for the matrix function and see if you can figure out how to create a matrix containing the same numbers (1-20) and dimensions (4 rows, 5 columns) by calling the matrix() function. Store the result in a variable called my_matrix2.
   CorrectAnswer: my_matrix2 <- matrix(1:20, nrow=4, ncol=5)
-  AnswerTests: omnitest(correctExpr='matrix(1:20, nrow=4, ncol=5)'); expr_creates_var('my_matrix2')
+  AnswerTests: omnitest(correctExpr='my_matrix2 <- matrix(1:20, nrow=4, ncol=5)'); 
   Hint: Call the matrix() function with three arguments -- 1:20, the number of rows, and the number of columns. Be sure to specify arguments by their proper names and store the result in my_matrix2 (not in my_matrix).
 
 - Class: cmd_question
