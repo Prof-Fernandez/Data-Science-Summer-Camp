@@ -10,5 +10,5 @@ library(jpeg)
 
 # Put initialization code in this file.
 path_to_course <- file.path(.get_course_path(),
-	"UL_Intro_to_R","Principles_of_Analytic_Graphs")
+	"Data-Science-Summer-Camp","Principles_of_Analytic_Graphs")
 plot.new()

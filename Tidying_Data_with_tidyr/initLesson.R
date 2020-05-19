@@ -59,7 +59,7 @@ students2 <- data.frame(
 }
 
 .lesson_path <- file.path(.get_course_path(),
-                          'UL_Intro_to_R',
+                          'Data-Science-Summer-Camp',
                           'Tidying_Data_with_tidyr')
 
 .path2s3 <- file.path(.lesson_path, 'students3.csv')

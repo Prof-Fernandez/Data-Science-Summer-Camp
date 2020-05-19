@@ -10,4 +10,4 @@
 # the lesson.
 
 hunger <-read.csv(file.path(.get_course_path(),
-	"Regression_Models","MultiVar_Examples3","hunger.csv"))
+	"Data-Science-Summer-Camp","MultiVar_Examples3","hunger.csv"))

@@ -7,7 +7,7 @@
 
 local({
   fname <- file.path(.get_course_path(),
-  	"Regression_Models", "Introduction_to_Multivariable_Regression", "elimination.R")
+  	"Data-Science-Summer-Camp", "Introduction_to_Multivariable_Regression", "elimination.R")
   file.copy(fname, "elimination.R")
   file.edit("elimination.R")
 })
